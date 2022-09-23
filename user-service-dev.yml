@@ -1,0 +1,22 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: user
+  r2dbc:
+    url: r2dbc:pool:postgresql://localhost:5001/user_db
+    username: user
+    password: password
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    eureka-server-u-r-l-defaultZone: http://localhost:8761/eureka/
+    instance:
+      hostname: localhost
+
+      instanceId: ${eureka.instance.hostname}:${spring.application.name}
+      statusPageUrl: http://${eureka.hostname}/
+      healthCheckUrl: http://${eureka.hostname}/actuator/health
+      secureHealthCheckUrl: http://${eureka.hostname}/actuator/health
