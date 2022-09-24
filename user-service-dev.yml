@@ -1,8 +1,4 @@
-server:
-  port: 8081
 spring:
-  application:
-    name: user
   r2dbc:
     url: r2dbc:pool:postgresql://localhost:5001/user_db
     username: user
