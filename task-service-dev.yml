@@ -1,8 +1,4 @@
-server:
-  port: 8082
 spring:
-  application:
-    name: task
   r2dbc:
     url: r2dbc:pool:postgresql://localhost:5002/task_db
     username: task
