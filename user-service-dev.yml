@@ -1,7 +1,7 @@
 spring:
   r2dbc:
     url: r2dbc:pool:postgresql://localhost:5001/user_db
-    username: user
+    username: useradmin
     password: password
 
 eureka:
